@@ -1,0 +1,19 @@
+* D:\LTSpice\SRAM 6T.asc
+M1 N006 Q 0 0 NMOS
+M2 N005 Qbar 0 0 NMOS
+M3 N005 Qbar N002 N002 PMOS
+M4 N006 Q N002 N002 PMOS
+V1 N002 0 5
+M5 Q N001 N003 N003 NMOS
+M6 N004 N001 Qbar Qbar NMOS
+C1 N003 0 1µ
+C2 N004 0 1µ
+V§bitbar N004 0 PULSE(5 0 0 0 0 25n 50n)
+V§bit N003 0 PULSE(0 5 0 0 0 25n 50n)
+V§Wordline N001 0 PWL(0 5 15n 5 16n 0 25n 0 26n 5)
+.model NMOS NMOS
+.model PMOS PMOS
+.lib D:\LTSpice\lib\cmp\standard.mos
+.tran 0 100n 0 0.1n
+.backanno
+.end

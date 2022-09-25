@@ -1,4 +1,4 @@
-# SRAM
+# 6T SRAM Cell
 6T SRAM stands for static random access memory using total 6 Transistors, where 4 transistor are of nmos and 2 transistors of pmos here. 
 In addition to that we are having wordline(WL) and bit lines. Q and Qbar are the outputs of the respective inverters. 
 There are 3 operations of 6T SRAM: Read, Hold and Write. There are two precharged capacitor,it will be used in read and write operation. 
